@@ -1,0 +1,21 @@
+#!/bin/bash -l
+
+#$ -P bf528
+#$ -cwd
+#$ -j y
+#$ -pe mpi_16_tasks_per_node 16
+
+echo "Running job $JOB_ID"
+echo "Started: $(date +%F)"
+echo "Running in directory: $PWD"
+
+# your commands here
+
+module load cufflinks
+module load rseqc
+module load samtools
+module load python3
+
+cufflinks --compatible-hits-norm -G /project/bf528/project_2/reference/annot/mm9.gtf -b /project/bf528/project_2/reference/mm9.fa -u -o /projectnb/bf528/users/group_5/project_2/programmer/output/cufflinks -p 16 /projectnb/bf528/users/group_5/project_2/programmer/accepted_hits.bam
+
+echo "Job finished: $(date +%F)"

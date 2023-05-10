@@ -1,0 +1,39 @@
+Running job 758946
+Started: 2023-03-04
+Running in directory: /projectnb/bf528/users/group_5/project_2/programmer
+Traceback (most recent call last):
+  File "/share/pkg.7/rseqc/5.0.1/install/bin/geneBody_coverage.py", line 301, in <module>
+    main()
+  File "/share/pkg.7/rseqc/5.0.1/install/bin/geneBody_coverage.py", line 247, in main
+    OUT1 = open(options.output_prefix  + ".geneBodyCoverage.txt"	,'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/projectnb/bf528/users/group_5/project_2/programmer/ouput/genebody.geneBodyCoverage.txt'
+Get exon regions from /project/bf528/project_2/reference/annot/mm9.bed ...
+Load BAM file ...  Total read pairs  used 1000000
+Name	Mean	Median	sd
+/projectnb/bf528/users/group_5/project_2/programmer/output/innerdistance	85.4128051728816	77.5	43.4269745014548
+null device 
+          1 
+Load BAM file ...  Done
+
+#==================================================
+#All numbers are READ count
+#==================================================
+
+Total records:                          49706999
+
+QC failed:                              0
+Optical/PCR duplicate:                  0
+Non primary hits                        8317665
+Unmapped reads:                         0
+mapq < mapq_cut (non-unique):           2899954
+
+mapq >= mapq_cut (unique):              38489380
+Read-1:                                 19409941
+Read-2:                                 19079439
+Reads map to '+':                       19236824
+Reads map to '-':                       19252556
+Non-splice reads:                       33099839
+Splice reads:                           5389541
+Reads mapped in proper pairs:           27972916
+Proper-paired reads map to different chrom:4
+Job finished: 2023-03-04
